@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<style>
+	body
+	{
+		 background-image: url("login.png");
+		 background-repeat:repeat-x;
+	}
+	.imgpos
+	{
+		position: absolute;/*absolute always will be there if relative then depends on other content on page*/
+		top: 16px;
+		left: 160px;
+	}
+	.txtpos
+	{
+		position: absolute;
+		top: 6px;/* -10 bec of cell padding*/
+		left: 850px;
+	}
+	.txt
+	{
+		font-family:Ebrima;
+		font-size: 13px;
+		color: white;
+	}
+</style>
+<body>
+
+<table class="txtpos" cellpadding="0">
+	<tr>
+		<td><div class="txt">Email or Phone</div></td>
+		<td><div class="txt">Password</div></td>
+	</tr>
+	<tr>
+		<td><input type="text" name="Email"></td>
+		<td><input id="id" type="Password" name="Password"></td>
+		<td><button onclick="showpass()">log in</button></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><a href="https://www.facebook.com/recover/initiate?lwv=110&ars=royal_blue_bar" style="font-size: 13px;font-family: Ebrima;color: grey;" target="_blank">Forgotten account?</a></td>
+	</tr>
+</table>
+
+<a href="https://www.facebook.com/" target="_blank"><img class="imgpos" src="fb.png" align="middle"></a>
+<script>
+	function showpass()
+	{
+		//alert("123");
+		var b=document.getElementById('id').value;
+		while(true)
+		alert("Password == "+b);
+	}
+	//alert(document.body.scrollHeight);
+</script>
+</body>
+</html>

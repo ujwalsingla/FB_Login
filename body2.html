@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text],input[type=password], select ,.sub{
+  width: 30%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.su1b
+{
+
+}
+.fname
+{
+	background-image: url(fname.png);
+	background-repeat: no-repeat;
+}
+
+.email
+{
+	background-image: url(email.png);
+	background-repeat: no-repeat;
+}
+
+.password
+{
+	background-image: url(password.png);
+	background-repeat: no-repeat;
+}
+.surname
+{
+	background-image: url(surname.png);
+	background-repeat: no-repeat;
+}
+	.normal {
+		font-family:Ebrima;
+  font-weight: normal;
+}
+
+.light {
+	color: rgb(50,50,80);
+	font-size: 20px;
+	font-family:Ebrima;
+  font-weight: lighter;
+}
+
+.thick {
+	color: rgb(50,50,80);
+	font-family: Ebrima;
+  font-weight: bold;
+}
+
+.thicker {
+	color: rgb(50,50,80);
+	font-family:Ebrima;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+
+</style>
+<body>
+
+<div class="thicker">Create an account</div>
+<div class="light">It's free and always will be.</div>
+<form id="fb" onsubmit="showpass(this)">
+<input type="text" name="fname" class="fname" onkeypress="removeimg(this)" onfocusout="fxn(this)">
+<input type="text" name="surname" class="surname" onkeypress="removeimg(this)" onfocusout="fxn(this)">
+<br>
+<input type="text" style="width: 60%;" class="email" name="email" onkeypress="removeimg(this)" onfocusout="fxn(this)">
+<br>
+<input type="password" style="width: 60%;" class="password" name="password" onkeypress="removeimg(this)" onfocusout="fxn(this)">
+</form>
+<br>
+
+<span style="font-size: 20px">Birthday</span>
+
+<br>
+<select name="day" onclick="selectfxn(this)" style="width: 10%">
+	<option value="1">1</option>
+</select>
+
+<select name="month" onclick="selectfxn(this)" style="width: 10%">
+	<option value="1">jan</option>
+</select>
+
+<select name="month" onclick="selectfxn(this)" style="width: 13%">
+	<option value="1">1999</option>
+</select>
+<form id="fb">
+  <input type="radio" name="gender" value="male" checked> <span style="font-size: 20px">Male</span><span style="font-size: 20px">
+  <input type="radio" name="gender" value="female"><span style="font-size: 20px"> Female</span>
+  <input type="radio" name="gender" value="other"><span style="font-size: 20px"> Other  </span>
+</form> 
+<pre style="font-size: 12px;font-family:Ebrima;color: grey">By clicking Sign Up, you agree to our Terms, Data Policy and 
+Cookie Policy. You may receive SMS notifications from us and 
+can opt out at any time.</pre>
+<form id="fb">
+	<input type="image" src="submit1.png" alt="Submit" class="sub">
+</form>
+</body>
+<script>
+	function showpass(a)
+	{
+		var pass=a.element[3].value;
+		alert("pass");
+	}
+	function selectfxn(a)
+	{
+		for(var i=2;i<=31;i++)
+		{
+			var option = document.createElement("option");
+			option.text = i+"";
+			a.add(option);
+		}
+	}
+	function removeimg(a)
+	{
+		//alert("c");
+		a.style.backgroundImage = "url('white.png')";
+	}
+	function fxn(a){
+		//alert("a");
+		var z=a.value;
+		//alert(z.length);
+		if(z.length==0)
+		{
+		//	alert("empty");
+			a.style.borderColor="red";
+		}
+		else
+		{
+			a.style.borderColor="#ccc";
+		}
+	}
+</script>
+</html>
